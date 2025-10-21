@@ -29,7 +29,7 @@ public class JsonUtiles
     public static JSONTokener leerUnJson(String archivo)
     {
         JSONTokener tokener = null;
-
+        
         try
         {
             tokener = new JSONTokener(new FileReader(archivo));
