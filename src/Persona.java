@@ -1,9 +1,11 @@
-public class Persona
+import org.json.JSONObject;
+
+public class Persona implements ToJson
 {
     private String nombre;
     private int edad;
     private int dni;
-    private char sexo;
+    private Character sexo;
 
     public Persona(String nombre, int edad, int dni, char sexo)
     {
@@ -53,4 +55,16 @@ public class Persona
         this.sexo = sexo;
     }
 
+    @Override
+    public JSONObject toJson()
+    {
+        JSONObject objeto = new JSONObject();
+
+        objeto.put("nombre", nombre);
+        objeto.put("edad", edad);
+        objeto.put("dni", dni);
+        objeto.put("sexo", sexo);
+
+        return objeto;
+    }
 }
