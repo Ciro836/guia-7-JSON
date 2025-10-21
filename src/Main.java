@@ -62,6 +62,7 @@ void main()
      */
 
     //PUNTO 4
+    /*
     Biblioteca biblioteca1 = new Biblioteca("Biblioteca UTN");
 
     biblioteca1.agregarLibro("Barcos");
@@ -69,11 +70,22 @@ void main()
     biblioteca1.agregarLibro("Java");
     biblioteca1.agregarLibro("Programacion");
 
-    JSONObject objeto = biblioteca1.toJson();
+    JSONObject objeto1 = biblioteca1.toJson();
+
+    Biblioteca biblioteca2 = new Biblioteca("Biblioteca de CIRO");
+
+    biblioteca2.agregarLibro("Lenovo");
+    biblioteca2.agregarLibro("Apple");
+    biblioteca2.agregarLibro("Google");
+    biblioteca2.agregarLibro("Tesla");
+
+    JSONObject objeto2 = biblioteca2.toJson();
+
 
     JSONArray array = new JSONArray();
 
-    array.put(objeto);
+    array.put(objeto1);
+    array.put(objeto2);
 
     JsonUtiles.grabarUnJson(array, "biblioteca.json");
 
@@ -81,5 +93,13 @@ void main()
 
     JSONArray array2 = new JSONArray(JsonUtiles.leerUnJson("biblioteca.json"));
 
-    System.out.println(array2);
+    for (int i = 0; i < array2.length(); i++)
+    {
+        System.out.println("\n" + array2.get(i).toString());
+    }
+    */
+
+    //PUNTO 5
+    
+
 }
